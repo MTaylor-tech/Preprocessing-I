@@ -1,1 +1,359 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  padding: 2vw;
+  font-size: 1.6rem;
+  color: #343434;
+  font-family: 'Roboto', sans-serif;
+}
+.container .intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2vw;
+  background-color: #CCCCCC;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.container .intro .image {
+  width: 48%;
+}
+.container .intro .info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 48%;
+  padding: 2vw;
+}
+.container .intro .contact {
+  line-height: 1.5;
+}
+.container .intro .top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-top: 2vw;
+}
+.container .about {
+  padding: 2vw;
+  border: 2px solid #CCCCCC;
+  border-top: 0;
+}
+.container .skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2vw;
+  border: 2px solid #CCCCCC;
+  border-top: 0;
+}
+.container .skills .skills-list {
+  display: inline-block;
+  width: 48%;
+  padding-left: 2vw;
+  text-indent: -2vw;
+}
+.container .skills .image {
+  width: 48%;
+}
+.container .experience {
+  padding: 2vw;
+  border: 2px solid #CCCCCC;
+  border-top: 0;
+}
+.container .addinfo {
+  padding: 2vw;
+  border: 2px solid #CCCCCC;
+  border-top: 0;
+}
+.container .rotate-90 {
+  transform: rotate(90deg);
+}
+.container .rotate-180 {
+  transform: rotate(180deg);
+}
+.container .rotate-270 {
+  transform: rotate(270deg);
+}
+.container .hanging-indent {
+  padding-left: 2vw;
+  text-indent: -2vw;
+}
+.container .centered {
+  text-align: center;
+}
+.container .padded {
+  padding: 2vw;
+}
+.container .bordered {
+  border: 2px solid #CCCCCC;
+  border-top: 0;
+}
+.container .h1 {
+  font-size: 3.6rem;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.container .h2 {
+  font-size: 2.2rem;
+  line-height: 1.5;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.container .h3 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.container .inline {
+  display: inline-block;
+}
+.container .hidden {
+  visibility: hidden;
+}
+.container .padded-r {
+  padding-right: 2vw;
+}
+.container .padded-l {
+  padding-left: 2vw;
+}
+.container .margin-r {
+  margin-right: 2vw;
+}
+.container .margin-r-small {
+  margin-right: 1vw;
+}
+.container .margin-l {
+  margin-left: 2vw;
+}
+.container .margin-b {
+  margin-bottom: 2vw;
+}
+.container .margin-t {
+  margin-top: 2vw;
+}
+.container .justified {
+  text-align: justify;
+}
+.container .top-left {
+  border-top-left-radius: 20px;
+}
+.container .top-right {
+  border-top-right-radius: 20px;
+}
+.container .bottom-left {
+  border-bottom-left-radius: 20px;
+}
+.container .bottom-right {
+  border-bottom-right-radius: 20px;
+}
+.container .major {
+  font-size: 3.6rem;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border-bottom: 1px dotted #343434;
+}
+.container .subtitle {
+  font-size: 2.2rem;
+  line-height: 1.5;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.container .large {
+  font-size: 150%;
+}
+@media (max-width: 796px) {
+  .container .large {
+    font-size: 100%;
+  }
+}
+.container .larger {
+  font-size: 200%;
+}
+@media (max-width: 796px) {
+  .container .larger {
+    font-size: 150%;
+  }
+}
+.container .flexr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.container .flexc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container .nodec {
+  text-decoration: none;
+  color: #343434;
+}
+.container .nodec:hover {
+  color: darkred;
+}
+.container .footer {
+  padding: 2vw;
+  background-color: #CCCCCC;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.container .footer .footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
