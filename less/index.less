@@ -13,10 +13,10 @@
 @hover-color: darkred;
 @box-background: #CCCCCC;
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald|Raleway&display=swap');
 
 @font-h: 'Open Sans Condensed';
-@font-reg: 'Roboto';
+@font-reg: 'Raleway';
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -80,6 +80,7 @@ html {
 	font-size: @font-size-reg;
 	color: @text-color;
 	font-family: @font-reg, sans-serif;
+	line-height: 1.5;
 
 	.intro {
 		.flexr();
@@ -91,12 +92,20 @@ html {
 
 		.image {
 			width: @almost-half;
+
+			@media print {
+				display: none;
+			}
 		}
 
 		.info-box {
 			.flexc();
 			width: @almost-half;
 			padding: 2vw;
+
+			@media print {
+				width: 100%;
+			}
 		}
 
 		.contact {
@@ -107,6 +116,10 @@ html {
 			.flexr();
 			width: 100%;
 			padding-top: 2vw;
+
+			@media print {
+				display: none;
+			}
 		}
 	} // .intro
 
@@ -124,10 +137,18 @@ html {
 			display: inline-block;
 			width: @almost-half;
 			.hanging-indent();
+
+			@media print {
+				width: 100%;
+			}
 		}
 
 		.image {
 			width: @almost-half;
+
+			@media print {
+				display:none;
+			}
 		}
 	} // .skills
 
@@ -211,6 +232,10 @@ html {
 	.bordered {
 		border: 2px solid @box-background;
 		border-top: 0;
+
+		@media print {
+			border-top: 2px solid @box-background;
+		}
 	}
 
 	.h1 {
@@ -355,4 +380,16 @@ html {
 			.flexr();
 		}
 	}// .footer
+
+	i {
+		@media print {
+			display: none;
+		}
+	}
+
+	.hide-in-print {
+		@media print {
+			display: none;
+		}
+	}
 } // .container

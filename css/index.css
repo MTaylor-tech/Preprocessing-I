@@ -10,11 +10,18 @@
   src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Oswald';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxP.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/oswald/v29/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiYA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
 }
 html,
 body,
@@ -155,7 +162,8 @@ html {
   padding: 2vw;
   font-size: 1.6rem;
   color: #343434;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5;
 }
 .container .intro {
   display: flex;
@@ -171,12 +179,22 @@ html {
 .container .intro .image {
   width: 48%;
 }
+@media print {
+  .container .intro .image {
+    display: none;
+  }
+}
 .container .intro .info-box {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 48%;
   padding: 2vw;
+}
+@media print {
+  .container .intro .info-box {
+    width: 100%;
+  }
 }
 .container .intro .contact {
   line-height: 1.5;
@@ -189,10 +207,20 @@ html {
   width: 100%;
   padding-top: 2vw;
 }
+@media print {
+  .container .intro .top-nav {
+    display: none;
+  }
+}
 .container .about {
   padding: 2vw;
   border: 2px solid #CCCCCC;
   border-top: 0;
+}
+@media print {
+  .container .about {
+    border-top: 2px solid #CCCCCC;
+  }
 }
 .container .skills {
   display: flex;
@@ -203,19 +231,39 @@ html {
   border: 2px solid #CCCCCC;
   border-top: 0;
 }
+@media print {
+  .container .skills {
+    border-top: 2px solid #CCCCCC;
+  }
+}
 .container .skills .skills-list {
   display: inline-block;
   width: 48%;
   padding-left: 2vw;
   text-indent: -2vw;
 }
+@media print {
+  .container .skills .skills-list {
+    width: 100%;
+  }
+}
 .container .skills .image {
   width: 48%;
+}
+@media print {
+  .container .skills .image {
+    display: none;
+  }
 }
 .container .experience {
   padding: 2vw;
   border: 2px solid #CCCCCC;
   border-top: 0;
+}
+@media print {
+  .container .experience {
+    border-top: 2px solid #CCCCCC;
+  }
 }
 .container .experience .exp-table {
   border: 1px solid #CCCCCC;
@@ -251,6 +299,11 @@ html {
   border: 2px solid #CCCCCC;
   border-top: 0;
 }
+@media print {
+  .container .addinfo {
+    border-top: 2px solid #CCCCCC;
+  }
+}
 .container .rotate-90 {
   transform: rotate(90deg);
 }
@@ -279,6 +332,11 @@ html {
 .container .bordered {
   border: 2px solid #CCCCCC;
   border-top: 0;
+}
+@media print {
+  .container .bordered {
+    border-top: 2px solid #CCCCCC;
+  }
 }
 .container .h1 {
   font-size: 3.6rem;
@@ -400,4 +458,14 @@ html {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+@media print {
+  .container i {
+    display: none;
+  }
+}
+@media print {
+  .container .hide-in-print {
+    display: none;
+  }
 }
