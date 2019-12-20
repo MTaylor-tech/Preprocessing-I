@@ -135,6 +135,39 @@ html {
 		.padded();
 		.bordered();
 
+		.exp-table {
+			border: 1px solid @box-background;
+			width: 100%;
+			.padded();
+
+			.table-data {
+				padding: 3px;
+				line-height: 1.3;
+
+				.padded-t {
+					padding-top: 2vh;
+				}
+			}
+
+			.table-data:first-child {
+				.h3();
+				padding-left: 2vw;
+				vertical-align: middle;
+			}
+
+			.table-data:last-child {
+				padding-right: 2vw;
+			}
+
+			.table-row:nth-child(odd) {
+				background-color: #f2f2f2;
+			}
+
+			.table-header {
+				background-color: #f2f2f2;
+				text-align: center;
+			}
+		}
 	} // .experience
 
 	.addinfo {
@@ -159,8 +192,16 @@ html {
 	  text-indent: -2vw;
 	}
 
+	.italic {
+		font-style: italic;
+	}
+
 	.centered {
 		text-align: center;
+	}
+
+	.underlined {
+		border-bottom: 1px dotted @almost-black;
 	}
 
 	.padded {
@@ -205,6 +246,14 @@ html {
 		padding-left: 2vw;
 	}
 
+	.padded-b {
+		padding-bottom: 2vw;
+	}
+
+	.padded-t {
+		padding-top: 2vw;
+	}
+
 	.margin-r {
 		margin-right: 2vw;
 	}
@@ -219,6 +268,10 @@ html {
 
 	.margin-b {
 		margin-bottom: 2vw;
+	}
+
+	.margin-b-small {
+		margin-bottom: 1vw;
 	}
 
 	.margin-t {
