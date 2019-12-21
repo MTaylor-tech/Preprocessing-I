@@ -17,6 +17,8 @@
 
 @font-h: 'Open Sans Condensed';
 @font-reg: 'Raleway';
+@tablet: ~"(max-width: 796px)";
+@mobile: ~"(max-width: 500px)";
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -82,6 +84,10 @@ html {
 	font-family: @font-reg, sans-serif;
 	line-height: 1.5;
 
+	@media @mobile {
+		padding: 1vw;
+	}
+
 	.intro {
 		.flexr();
 		flex-wrap: wrap;
@@ -90,8 +96,18 @@ html {
 		border-top-right-radius: 20px;
 		border-top-left-radius: 20px;
 
+		@media @mobile {
+			.flexc();
+		}
+
 		.image {
 			width: @almost-half;
+			align-self: flex-start;
+
+			@media @mobile {
+				width: 100%;
+				.top-right();
+			}
 
 			@media print {
 				display: none;
@@ -102,6 +118,10 @@ html {
 			.flexc();
 			width: @almost-half;
 			padding: 2vw;
+
+			@media @mobile {
+				width: 100%;
+			}
 
 			@media print {
 				width: 100%;
@@ -116,6 +136,19 @@ html {
 			.flexr();
 			width: 100%;
 			padding-top: 2vw;
+
+			@media @mobile {
+				.flexc();
+				min-height: 200px;
+				align-items: stretch;
+				border-bottom: 1px dotted @almost-black;
+
+				a {
+					border-top: 1px dotted @almost-black;
+					text-align: center;
+					padding-top: 1.6vh;
+				}
+			}
 
 			@media print {
 				display: none;
@@ -133,10 +166,18 @@ html {
 		.padded();
 		.bordered();
 
+		@media @mobile {
+			.flexc();
+		}
+
 		.skills-list {
 			display: inline-block;
 			width: @almost-half;
 			.hanging-indent();
+
+			@media @mobile {
+				width: 100%;
+			}
 
 			@media print {
 				width: 100%;
@@ -145,6 +186,11 @@ html {
 
 		.image {
 			width: @almost-half;
+
+			@media @mobile {
+				width: 100%;
+				order: -1;
+			}
 
 			@media print {
 				display:none;
@@ -196,6 +242,30 @@ html {
 		.bordered();
 	} // .addinfo
 
+	.footer {
+		padding: 2vw;
+		padding-top: 0;
+		background-color: @box-background;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+
+		.footer-nav {
+			.flexr();
+			align-items: baseline;
+
+			.hidden {
+				display: inline-block;
+				max-width: 0px;
+			}
+
+			@media @mobile {
+				.hidden {
+					display: none;
+				}
+			}
+		}
+	}// .footer
+
 	.rotate-90 {
 		transform: rotate(90deg);
 	}
@@ -236,7 +306,7 @@ html {
 		@media print {
 			border-top: 2px solid @box-background;
 		}
-	}
+	} // .bordered
 
 	.h1 {
 		font-size: @font-size-h1;
@@ -369,17 +439,6 @@ html {
 			color: @hover-color;
 		}
 	} // .nodec
-
-	.footer {
-		padding: 2vw;
-		background-color: @box-background;
-		border-bottom-left-radius: 20px;
-		border-bottom-right-radius: 20px;
-
-		.footer-nav {
-			.flexr();
-		}
-	}// .footer
 
 	i {
 		@media print {

@@ -165,6 +165,11 @@ html {
   font-family: 'Raleway', sans-serif;
   line-height: 1.5;
 }
+@media (max-width: 500px) {
+  .container {
+    padding: 1vw;
+  }
+}
 .container .intro {
   display: flex;
   flex-direction: row;
@@ -176,8 +181,22 @@ html {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
+@media (max-width: 500px) {
+  .container .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
 .container .intro .image {
   width: 48%;
+  align-self: flex-start;
+}
+@media (max-width: 500px) {
+  .container .intro .image {
+    width: 100%;
+    border-top-right-radius: 20px;
+  }
 }
 @media print {
   .container .intro .image {
@@ -190,6 +209,11 @@ html {
   justify-content: space-around;
   width: 48%;
   padding: 2vw;
+}
+@media (max-width: 500px) {
+  .container .intro .info-box {
+    width: 100%;
+  }
 }
 @media print {
   .container .intro .info-box {
@@ -206,6 +230,21 @@ html {
   align-items: center;
   width: 100%;
   padding-top: 2vw;
+}
+@media (max-width: 500px) {
+  .container .intro .top-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 200px;
+    align-items: stretch;
+    border-bottom: 1px dotted #343434;
+  }
+  .container .intro .top-nav a {
+    border-top: 1px dotted #343434;
+    text-align: center;
+    padding-top: 1.6vh;
+  }
 }
 @media print {
   .container .intro .top-nav {
@@ -236,11 +275,23 @@ html {
     border-top: 2px solid #CCCCCC;
   }
 }
+@media (max-width: 500px) {
+  .container .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
 .container .skills .skills-list {
   display: inline-block;
   width: 48%;
   padding-left: 2vw;
   text-indent: -2vw;
+}
+@media (max-width: 500px) {
+  .container .skills .skills-list {
+    width: 100%;
+  }
 }
 @media print {
   .container .skills .skills-list {
@@ -249,6 +300,12 @@ html {
 }
 .container .skills .image {
   width: 48%;
+}
+@media (max-width: 500px) {
+  .container .skills .image {
+    width: 100%;
+    order: -1;
+  }
 }
 @media print {
   .container .skills .image {
@@ -302,6 +359,29 @@ html {
 @media print {
   .container .addinfo {
     border-top: 2px solid #CCCCCC;
+  }
+}
+.container .footer {
+  padding: 2vw;
+  padding-top: 0;
+  background-color: #CCCCCC;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.container .footer .footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-items: baseline;
+}
+.container .footer .footer-nav .hidden {
+  display: inline-block;
+  max-width: 0px;
+}
+@media (max-width: 500px) {
+  .container .footer .footer-nav .hidden {
+    display: none;
   }
 }
 .container .rotate-90 {
@@ -446,18 +526,6 @@ html {
 }
 .container .nodec:hover {
   color: darkred;
-}
-.container .footer {
-  padding: 2vw;
-  background-color: #CCCCCC;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.container .footer .footer-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 @media print {
   .container i {
